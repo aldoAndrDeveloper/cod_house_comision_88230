@@ -1,6 +1,5 @@
 
 const btnSignUp = document.getElementById('btnSignUp');
-// 1. Obtener todos los valores
 
 btnSignUp.addEventListener('click', function() {
     validateFields();
@@ -8,6 +7,7 @@ btnSignUp.addEventListener('click', function() {
 
 function validateFields(){
     //guardaré los usuarios registrados en el localStorage para este proyecto
+    //De aquí obtendo todos los datos de usuario 
     let usersList = JSON.parse(localStorage.getItem('users')) || [];
 
     const userName = document.getElementById('username').value;
@@ -26,6 +26,7 @@ function validateFields(){
     if(usersList.find(user => user.email === email)){
         alert("El usuario ya existe, intenta con otro correo");
     }else{
+        //se crea el objeto JSON que se guardará en el localstorage
         const users = {
             userName: userName,
             lastName: lastName,
