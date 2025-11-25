@@ -1,7 +1,8 @@
  
 
 
-
+/*
+este fue el código que usé para la primer pre entrega, ya no se necesita
 let datosUsuario = [];
 
 menuBienvenida();
@@ -91,3 +92,4 @@ function confirmar(){
         menuBienvenida();
     }
 }
+    */
