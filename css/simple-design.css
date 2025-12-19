@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card-body {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+.card-img {
+    width: 120px; /* Tamaño de la imagen */
+    height: 120px;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-weight: bold;
+}
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+button:hover { background-color: #0056b3; }
+
+.session-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.session-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+/* 4. Estilos para los Labels (Etiquetas) */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* 5. Estilos para los Inputs (Campos de texto) */
+input {
+    padding: 10px;
+    margin-bottom: 20px; /* Espacio debajo de cada input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none; /* Quita el borde azul por defecto al dar clic */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff; /* Cambia a azul cuando escribes */
+}

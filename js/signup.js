@@ -18,13 +18,15 @@ function validateFields(){
     
     
     if (userName === '' || lastName === '' || email === '' || password === '' || password2 === '') {
-        alert("Todos los campos son obligatorios");
+
+          Swal.fire("Todos los campos son obligatorios");
     }else        
     if (password !== password2) {
-        alert("Las contraseñas no coinciden");
+
+        Swal.fire("Las contraseñas no coinciden");
     }else
     if(usersList.find(user => user.email === email)){
-        alert("El usuario ya existe, intenta con otro correo");
+        Swal.fire("El usuario ya existe, intenta con otro correo");
     }else{
         //se crea el objeto JSON que se guardará en el localstorage
         const users = {
@@ -35,8 +37,16 @@ function validateFields(){
         };
         usersList.push(users);
         localStorage.setItem('users', JSON.stringify(usersList));
-        alert("Usuario registrado con éxito");
-        window.history.back();
+        Swal.fire({
+            title: "Usuario registrado con éxito",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 1500          
+        });
+
+        setTimeout(() => {
+            window.history.back();
+        }, 1500); 
 
     }    
     
